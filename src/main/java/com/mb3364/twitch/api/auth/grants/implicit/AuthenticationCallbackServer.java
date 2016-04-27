@@ -86,7 +86,6 @@ public class AuthenticationCallbackServer implements AuthenticationListener {
             } catch (SocketTimeoutException e) {
                 stop();
                 throw e;
-            }
             } catch (SocketException e) {
                 //Socket closed by another thread
                 break;
