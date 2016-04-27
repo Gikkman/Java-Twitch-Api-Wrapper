@@ -75,7 +75,7 @@ public class AuthenticationCallbackServer implements AuthenticationListener {
         while (true) {
             try {
                 // Listen for a TCP connection request
-                serverSocket..setSoTimeout(60 * 1000); //The user has 1 minute to respond
+                serverSocket.setSoTimeout(60 * 1000); //The user has 1 minute to respond
                 Socket connectionSocket = serverSocket.accept();
                 // Handle request
                 AuthenticationCallbackRequest request = new AuthenticationCallbackRequest(connectionSocket, authPage, failurePage, successPage);
